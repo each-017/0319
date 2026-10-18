@@ -2,54 +2,237 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的个人主页</title>
-    <style>
+    <meta name="viewport" content="width-device-width,initial-scale=1">
+    <title>吴香妮的个人主页</title>
+<style>
+    { box-sizing: border-box; }
+    html{scroll-padding-top:100px}
 body {
-    background-color:#f4f8fb;
-    max-width:700px;
-    margin:40px auto;
-    padding:0 20px;
-    color:#444;
-    line-height:1.7;
-    font-size:16px;
+    margin: 0
+    padding-top: 100px; 
+    font-family: "SimSun", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color:#63c5ff;
+    background-color:#eef3f9;}
+    #home{
+    margin-top: 100px;
+    }
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background: #ffffff;
+  border-bottom: 1px solid #87ceeb;
+}
+.nav a {
+    color:blue;
+    text-decoration: none;
+    padding: 3px 2px ;
+    border-bottom: 2px solid transparent;
+}
+.nav a:hover {
+    border-bottom-color:aqua;
+}
+
+main{
+    max-width:  900px;
+    margin: 32px auto;
+    padding: 36px;
+    background-color:#eef3f9;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(36, 54, 75, .06)
 }
 h1 {
-    color:#552b70;
-    font-size:28px;
-}
-h2 {
-    color:#206040;
+    margin: 0;
+    font-size: 30px;
+    color:purple}
+h2 {color:green
     font-size:22px;
-    margin-top:30px;
+    margin: 0 0 14px;
 }
-p {
-    color:#444;
+h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
 }
-img {
-    border-radius:8px;
-    box-shadow: 2px 2px 8px #cccccc;
+main > h2 { margin-top: 32px;}
+p { margin: 0 0 12px;}
+a { color:cornflowerblue}
+.profile {
+    display: flex;
+    gap: 26px;
+    margin-top: 26px;
+    align-items: center;
+    margin-top: 26px ;
+    padding:30px;
+    background:#ffffff
+    border-radius: 12px;
 }
-a {
-    color:#552b70;
+.myphoto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
 }
-</style>
+.text-box {
+    flex: 1:
+}
+.text-box h2{
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.text-box p {
+    margin-bottom: 6px ;
+}
+@media (max-width: 600px){
+  .profile{
+    flex-direction: column; 
+    text-align: center;
+  }
+} 
+.work {
+    flex: 1 1 240px;
+    display: flex;
+    flex-direction: column;
+    background: #eef3f9;
+    border: 1px solid #dde6ef;
+    border-radius: 12px;
+    overflow:hidden;
+} 
+.works{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.work img{
+    max-width:300px;
+    width:100%
+    height:auto;
+    object-fit: cover;
+    display:block;
+    margin:16px auto;
+    border-radius:12px;
+    object-position:center 
+    box-shadow:0 2px 8px rgba(0,0,0,0.1)
+}
+.work a {
+    margin-top: auto;
+    font-weight: bold;
+    text-decoration: none;
+}
+.detail{
+    margin:30px 0;
+}
+.details{
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #e4ecf4;
+    display: flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.contact{
+    margin-top:32px;
+    padding-top:24px;
+    border-top:1px solid #e4ecf4
+}
+.detail-item{
+    flex:1;
+    min-width:220px;
+    max-width:340px;
+} img{
+    width:100%;
+    height:auto;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    display:block;
+}
+footer {
+    margain-top: 28px;
+    text-align: center;
+    color:darkgray;
+    font-size: 15px;
+}
+main{
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 36px;
+  background-color: #eef3f9;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(36, 54, 75, .06);
+}
 
+</style>
 </head>
 <body>
-    <h1>吴香妮</h1>
-    <h2>个人简介</h2>
-    <p>来自四川绵阳，19岁，女</p >
-    <h2>兴趣方向</h2>
-    <p>喜欢听欧美，kpop；看悬疑推理小说；追星</p >
-    <h2>照片</h2>
-<img src="photo.jpg.jpg"width="300" alt="个人图片">
-
-    <h2>推荐链接</h2>
-    <!-- 超链接，点击跳转 -->
+<nav class="nav">
+    <a href="#home">首页</a>
+    <a href="#about">个人简介</a>
+    <a href="#works">我的作品</a>
+    <a href="#contact">联系我</a>
+</nav>
+</main>
+<header id="home"></header>
+    <h1>吴香妮的个人主页</h1>
+</header>
+<section class="profile" id="about">
+     <img class="myphoto" src="photo0.jpg" alt="个人照片"
+<div class="text-box">
+    <h2>你好，我是吴香妮</h2>
+    <p>大数据专业学生，来自四川绵阳，天秤座，INTJ。</p>
+    <p>喜欢听欧美，kpop；看悬疑推理小说；追星。</p>
+</div>
+</section>
+<h2 section class="works" id="works">我的作品</h2>
+<article class="work">
+    <h3>抖音主页</h3>
+    <p>记录我的产出/p>
+   <a href="https://www.douyin.com/user/self" target="_blank">访问我的抖音主页</a>
+    </article>
+<article class="work">
+    <h3>摄影集</h3>
+    <p>杂七杂八的照片。</p>
+    <a href="#project">查看作品</a>
+</article> 
+<section class="detail-wrap">
+    <h2>作品详情</h2>
+    <h3 id="project">摄影集</h3>
+<div class="details">   
+    <article class="detail-item">
+  <img src="photo1.jpg" alt="作品1"
+    </article> 
+    <article class="detail-item">
+  <img src="photo2.jpg" alt="作品2"
+    </article>
+    <article class="detail-item">
+         <img src="photo3.jpg" alt="作品3">
+    </article>
+    </div>
+</section>   
+ <section class="music-link">
+    <h2>我的音乐主页</h2>
+    <p>
     <a href="https://music.163.com/#/user/home?id=1554815094">点这里访问我的网易云音乐主页,感受神的品味</a >
+    </p>
+    <section class="quote"
     <h2>喜欢的句子</h2>
-<p><em>什么都会迟到，但光会如约而至</em></p>
-    <hr> <!--一条分割横线-->
+    <p><em>什么都会迟到，但光会如约而至</em></p>
+</section>
+<section class="contact" id="contact">
+    <h2>联系我</h2>
+    <p>"邮箱："
+       <a href="mailto:2312721242@qq.com">2312721242@qq.com</a>
+    </p>
+</section>
+    <hr> 
 <p style="text‑align:center;font‑size:14px;color:#777;">2026｜我的个人主页</p>
 </body>
 </html>
