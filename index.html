@@ -1,238 +1,307 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width,initial-scale=1">
-    <title>吴香妮的个人主页</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="吴香妮的个人主页：大数据专业学生，摄影集、音乐主页与联系方式。">
+<title>吴香妮的个人主页</title>
 <style>
-    { box-sizing: border-box; }
-    html{scroll-padding-top:100px}
-body {
-    margin: 0
-    padding-top: 100px; 
-    font-family: "SimSun", sans-serif;
-    font-size: 17px;
-    line-height: 1.7;
-    color:#1a2434;
-    background-color:#eef3f9;}
-    #home{
-    margin-top: 100px;
+    *,
+    *::before,
+    *::after { box-sizing: border-box; }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 120px;
     }
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  background: #ffffff;
-  border-bottom: 1px solid #87ceeb;
-}
-.nav a {
-    color:blue;
-    text-decoration: none;
-    padding: 3px 2px ;
-    border-bottom: 2px solid transparent;
-}
-.nav a:hover {
-    border-bottom-color:aqua;
-}
 
-main{
-    max-width:  900px;
-    margin: 32px auto;
-    padding: 36px;
-    background-color:#eef3f9;
-    border-radius: 14px;
-    box-shadow: 0 4px 20px rgba(36, 54, 75, .06)
-}
-h1 {
-    margin: 0;
-    font-size: 30px;
-    color:purple}
-h2 {color:green
-    font-size:22px;
-    margin: 0 0 14px;
-}
-h3 {
-    margin: 0 0 8px;
-    font-size: 19px;
-}
-main > h2 { margin-top: 32px;}
-p { margin: 0 0 12px;}
-a { color:cornflowerblue}
-.profile {
-    display: flex;
-    gap: 26px;
-    margin-top: 26px;
-    align-items: center;
-    margin-top: 26px ;
-    padding:30px;
-    background:#ffffff
-    border-radius: 12px;
-}
-.myphoto {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.text-box {
-    flex: 1:
-}
-.text-box h2{
-    margin-bottom: 10px;
-    font-size: 24px;
-}
-.text-box p {
-    margin-bottom: 6px ;
-}
-@media (max-width: 600px){
-  .profile{
-    flex-direction: column; 
-    text-align: center;
-  }
-} 
-.work {
-    flex: 1 1 240px;
-    display: flex;
-    flex-direction: column;
-    background: #eef3f9;
-    border: 1px solid #dde6ef;
-    border-radius: 12px;
-    overflow:hidden;
-} 
-.works{
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-}
-.work img{
-    max-width:300px;
-    width:100%
-    height:auto;
-    object-fit: cover;
-    display:block;
-    margin:16px auto;
-    border-radius:12px;
-    object-position:center 
-    box-shadow:0 2px 8px rgba(0,0,0,0.1)
-}
-.work a {
-    margin-top: auto;
-    font-weight: bold;
-    text-decoration: none;
-}
-.detail{
-    margin:30px 0;
-}
-.details{
-    margin-top: 32px;
-    padding-top: 24px;
-    border-top: 1px solid #e4ecf4;
-    display: flex;
-    gap:20px;
-    flex-wrap:wrap;
-    justify-content: center;
-}
-.contact{
-    margin-top:32px;
-    padding-top:24px;
-    border-top:1px solid #e4ecf4
-}
-.detail-item{
-    flex:1;
-    min-width:220px;
-    max-width:340px;
-} img{
-    width:100%;
-    height:auto;
-    border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    display:block;
-}
-footer {
-    margain-top: 28px;
-    text-align: center;
-    color:darkgray;
-    font-size: 15px;
-}
-main{
-  max-width: 1000px;
-  margin: 32px auto;
-  padding: 36px;
-  background-color: #eef3f9;
-  border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(36, 54, 75, .06);
-}
+    body {
+        margin: 0;
+        padding-top: 100px;
+        font-family: "SimSun", "宋体", system-ui, sans-serif;
+        font-size: 17px;
+        line-height: 1.7;
+        color: #1a2434;
+        background-color: #eef3f9;
+    }
 
+    /* ---------- 导航 ---------- */
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 0 20px;
+        background: #ffffff;
+        border-bottom: 1px solid #87ceeb;
+    }
+
+    .nav a {
+        color: blue;
+        text-decoration: none;
+        padding: 3px 2px;
+        border-bottom: 2px solid transparent;
+        transition: border-color .2s, color .2s;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+        color: #1c5fd0;
+        border-bottom-color: aqua;
+    }
+
+    /* ---------- 主体容器 ---------- */
+    main {
+        max-width: 1000px;
+        margin: 32px auto;
+        padding: 36px;
+        background-color: #eef3f9;
+        border-radius: 14px;
+        box-shadow: 0 4px 20px rgba(36, 54, 75, .06);
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 30px;
+        color: purple;
+    }
+
+    h2 {
+        color: green;
+        font-size: 22px;
+        margin: 0 0 14px;
+    }
+
+    h3 {
+        margin: 0 0 8px;
+        font-size: 19px;
+    }
+
+    main > section > h2 { margin-top: 32px; }
+
+    p { margin: 0 0 12px; }
+
+    a { color: cornflowerblue; }
+
+    /* ---------- 个人简介 ---------- */
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        margin-top: 26px;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 12px;
+    }
+
+    .myphoto {
+        width: 80px;
+        height: 80px;
+        flex: 0 0 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .text-box { flex: 1; }
+
+    .text-box h2 {
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .text-box p { margin-bottom: 6px; }
+
+    /* ---------- 我的作品 ---------- */
+    .works {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+    }
+
+    .work {
+        flex: 1 1 240px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #dde6ef;
+        border-radius: 12px;
+    }
+
+    .work p { color: #45536b; }
+
+    .work a {
+        margin-top: auto;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .work a:hover { text-decoration: underline; }
+
+    /* ---------- 作品详情 ---------- */
+    .detail-wrap { margin: 30px 0; }
+
+    .detail-wrap > h3 { margin-top: 4px; }
+
+    .details {
+        margin-top: 20px;
+        padding-top: 24px;
+        border-top: 1px solid #e4ecf4;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .detail-item {
+        flex: 1 1 220px;
+        max-width: 300px;
+        margin: 0;
+    }
+
+    .detail-item img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        display: block;
+    }
+
+    /* ---------- 音乐 / 句子 ---------- */
+    .music-link { margin-top: 8px; }
+
+    .quote { margin: 32px 0; }
+
+    .quote p { color: #2a3750; }
+
+    /* ---------- 联系我 ---------- */
+    .contact {
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid #e4ecf4;
+    }
+
+    footer {
+        margin-top: 28px;
+        padding-bottom: 28px;
+        text-align: center;
+        color: darkgray;
+        font-size: 15px;
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 600px) {
+        body { padding-top: 72px; font-size: 16px; }
+
+        .nav {
+            height: 72px;
+            gap: 14px;
+            font-size: 15px;
+        }
+
+        main {
+            margin: 16px 12px;
+            padding: 22px 18px;
+        }
+
+        h1 { font-size: 24px; }
+
+        .profile {
+            flex-direction: column;
+            text-align: center;
+            padding: 24px 18px;
+        }
+
+        .detail-item { flex: 1 1 100%; max-width: 100%; }
+    }
 </style>
 </head>
 <body>
+
 <nav class="nav">
     <a href="#home">首页</a>
     <a href="#about">个人简介</a>
     <a href="#works">我的作品</a>
     <a href="#contact">联系我</a>
 </nav>
+
+<main>
+    <header id="home">
+        <h1>吴香妮的个人主页</h1>
+    </header>
+
+    <section class="profile" id="about">
+        <img class="myphoto" src="photo0.jpg" alt="吴香妮的个人照片">
+        <div class="text-box">
+            <h2>你好，我是吴香妮</h2>
+            <p>大数据专业学生，来自四川绵阳，天秤座，INTJ。</p>
+            <p>喜欢听欧美、K-pop；看悬疑推理小说；追星。</p>
+        </div>
+    </section>
+
+    <section id="works">
+        <h2>我的作品</h2>
+        <div class="works">
+            <article class="work">
+                <h3>抖音主页</h3>
+                <p>记录我的产出。</p>
+                <a href="https://www.douyin.com/user/self" target="_blank" rel="noopener noreferrer">访问我的抖音主页</a>
+            </article>
+            <article class="work">
+                <h3>摄影集</h3>
+                <p>杂七杂八的照片。</p>
+                <a href="#project">查看作品</a>
+            </article>
+        </div>
+    </section>
+
+    <section class="detail-wrap" id="project">
+        <h2>作品详情</h2>
+        <h3>摄影集</h3>
+        <div class="details">
+            <figure class="detail-item">
+                <img src="photo1.jpg" alt="摄影作品 1" loading="lazy">
+            </figure>
+            <figure class="detail-item">
+                <img src="photo2.jpg" alt="摄影作品 2" loading="lazy">
+            </figure>
+            <figure class="detail-item">
+                <img src="photo3.jpg" alt="摄影作品 3" loading="lazy">
+            </figure>
+        </div>
+    </section>
+
+    <section class="music-link">
+        <h2>我的音乐主页</h2>
+        <p>
+            <a href="https://music.163.com/#/user/home?id=1554815094" target="_blank" rel="noopener noreferrer">点这里访问我的网易云音乐主页，感受神的品味</a>
+        </p>
+    </section>
+
+    <section class="quote">
+        <h2>喜欢的句子</h2>
+        <p><em>什么都会迟到，但光会如约而至</em></p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>联系我</h2>
+        <p>邮箱：<a href="mailto:2312721242@qq.com">2312721242@qq.com</a></p>
+    </section>
 </main>
-<header id="home"></header>
-    <h1>吴香妮的个人主页</h1>
-</header>
-<section class="profile" id="about">
-     <img class="myphoto" src="photo0.jpg" alt="个人照片"
-<div class="text-box">
-    <h2>你好，我是吴香妮</h2>
-    <p>大数据专业学生，来自四川绵阳，天秤座，INTJ。</p>
-    <p>喜欢听欧美，kpop；看悬疑推理小说；追星。</p>
-</div>
-</section>
-<h2 section class="works" id="works">我的作品</h2>
-<article class="work">
-    <h3>抖音主页</h3>
-    <p>记录我的产出/p>
-   <a href="https://www.douyin.com/user/self" target="_blank">访问我的抖音主页</a>
-    </article>
-<article class="work">
-    <h3>摄影集</h3>
-    <p>杂七杂八的照片。</p>
-    <a href="#project">查看作品</a>
-</article> 
-<section class="detail-wrap">
-    <h2>作品详情</h2>
-    <h3 id="project">摄影集</h3>
-<div class="details">   
-    <article class="detail-item">
-  <img src="photo1.jpg" alt="作品1"
-    </article> 
-    <article class="detail-item">
-  <img src="photo2.jpg" alt="作品2"
-    </article>
-    <article class="detail-item">
-         <img src="photo3.jpg" alt="作品3">
-    </article>
-    </div>
-</section>   
- <section class="music-link">
-    <h2>我的音乐主页</h2>
-    <p>
-    <a href="https://music.163.com/#/user/home?id=1554815094">点这里访问我的网易云音乐主页,感受神的品味</a >
-    </p>
-    <section class="quote"
-    <h2>喜欢的句子</h2>
-    <p><em>什么都会迟到，但光会如约而至</em></p>
-</section>
-<section class="contact" id="contact">
-    <h2>联系我</h2>
-    <p>"邮箱："
-       <a href="mailto:2312721242@qq.com">2312721242@qq.com</a>
-    </p>
-</section>
-    <hr> 
-<p style="text‑align:center;font‑size:14px;color:#777;">2026｜我的个人主页</p>
+
+<footer>
+    <p>2026 ｜ 我的个人主页</p>
+</footer>
+
 </body>
 </html>
